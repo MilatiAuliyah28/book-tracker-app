@@ -1,298 +1,87 @@
-# Book Tracker App
+# 📚 Book Tracker App
+# 🧑‍💻 My Chosen Role
 
-A full-stack web application for managing your reading list, built with Flask and React. Build for People Recruitment Test. Integration with backend only works on page Library section Browse Library.
+**Frontend Developer (UI/UX)**
 
-<img src="./assets/home.png" height="200" alt="Home">
-<img src="./assets/library.png" height="200" alt="Library">
+Saya memilih peran sebagai pengemban frontend karena memiliki ketertarikan yang kuat terhadap UI/UX design. Selain itu, saya juga memiliki pengalaman menggunakan Figma untuk merancang Interface yang estetik dan fungsional. Di dalam proyek ini, saya menggunakan Vite, Tailwind CSS, dan React.
 
-## Features
+## 🛠️ How To Run My Part
+### ✅ Prasyarat:
+Sebelum memulai, pastikan Anda memiliki perangkat lunak berikut yang terinstal pada komputer Anda:
+- Python 3.13.3
+- Node.js 16.x
+- Git x64
 
-- 📚 Add, view, update, and delete books
-- 📖 Track reading status (unread/reading/completed)
-- 🎨 Modern and responsive UI with Tailwind CSS
-- 🔄 Real-time updates
-- ⚡ Fast and efficient with React + Vite
-- 🛡️ Type-safe with TypeScript
+## 🚀 Steps to Run a Project 
+# Clone repository (jika belum melakukannya):
+git clone 
+cd Book-app-/frontend
 
-## Tech Stack
-
-### Backend
-- Python 3.x
-- Flask
-- Flask-CORS
-- SQLAlchemy
-- python-dotenv
-
-### Frontend
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Axios
-- shadcn/ui components
-
-## Prerequisites
-
-- Python 3.x
-- Node.js 16.x or later
-- npm or yarn
-
-## Getting Started
-
-### Backend Setup
-
-1. Create and activate a virtual environment:
-```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-```
-
-2. Install backend dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Start the Flask server:
-```bash
-cd backend
-python app.py
-```
-
-The backend server will start on http://localhost:5000
-
-### Frontend Setup
-
-1. Install frontend dependencies:
-```bash
-cd frontend
+# Install semua dependensi yang dibutuhkan oleh proyek:
 npm install
-```
 
-2. Start the development server:
-```bash
-npm run dev
-```
+# Jalankan aplikasi secara lokal:
+npm run dev 
 
-The frontend will be available at http://localhost:5173
+Aplikasi kini dapat diakses di browser melalui http://localhost:8080/ untuk melihat dan menguji User Interface.
 
-## API Documentation
+## ✨ Fitur
 
-### Endpoints
+### 1. 🔐 Halaman Login (User Authentication)
+Deskripsi: Halaman login ini menyediakan antarmuka yang sederhana untuk pengguna memasukkan email dan password.
 
-#### GET /api/books
-- Returns all books
-- Response: Array of book objects
+Fitur:
 
-#### POST /api/books
-- Creates a new book
-- Request Body:
-```json
-{
-  "title": "string",
-  "author": "string",
-  "status": "unread" | "reading" | "completed"
-}
-```
+Saat ini, halaman ini hanya berupa mock UI dan belum terhubung dengan backend.
 
-#### PUT /api/books/<id>
-- Updates an existing book
-- Request Body: Same as POST
+Validasi dasar dilakukan untuk memastikan data yang dimasukkan oleh pengguna sesuai.
 
-#### DELETE /api/books/<id>
-- Deletes a book by ID
+Desain menggunakan Tailwind CSS untuk memastikan halaman login responsif di berbagai perangkat.
 
-## Project Structure
+Langkah Akses:
 
-```
-book-tracker-app/
-├── backend/
-│   └── app.py              # Flask backend API
-├── frontend/
-│   ├── src/
-│   │   ├── types/
-│   │   │   └── book.ts     # TypeScript interfaces
-│   │   ├── services/
-│   │   │   └── api.ts      # API service functions
-│   │   ├── App.tsx         # Main React component
-│   │   ├── main.tsx        # React entry point
-│   │   └── index.css       # Global styles
-│   ├── tailwind.config.js  # Tailwind configuration
-│   └── package.json        # Frontend dependencies
-└── requirements.txt        # Backend dependencies
-```
+Setelah membuka aplikasi, Anda akan diarahkan ke halaman login.
 
-## Development
+Masukkan email dan password pada kolom yang disediakan (perhatikan bahwa pada tahap ini, fitur login masih bersifat mock dan tidak terhubung ke backend).
 
-### Backend Development
-- The backend uses Flask for the API
-- CORS is enabled for frontend communication
-- Currently using in-memory storage (can be extended to use a database)
+📍 Lokasi: src/pages/Login.tsx
 
-### Frontend Development
-- Built with React + Vite for fast development
-- TypeScript for type safety
-- Tailwind CSS for styling
-- shadcn/ui components for consistent UI
+## 2. ⚙️ Halaman Pengaturan Pengguna (User Settings)
+Deskripsi: Halaman ini memungkinkan pengguna untuk memperbarui informasi pribadi mereka seperti nama, alamat email, dan password.
 
-## Contributing
+Fitur:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Halaman pengaturan dirancang menggunakan card UI yang responsif, sehingga mudah diakses baik di desktop maupun perangkat mobile.
 
-## Future Enhancements
+Tombol "Save Changes" disediakan, namun belum terhubung dengan backend (fungsi ini hanya tersedia pada UI).
 
-- [ ] Authentication system
-- [ ] Search and filtering
-- [ ] Sorting options
-- [ ] Book categories/tags
-- [ ] Reading progress tracking
-- [ ] Book ratings and reviews
-- [ ] Database integration
-- [ ] User profiles and personal libraries
+Langkah Akses:
 
-## License
+Setelah berhasil login, pengguna dapat mengakses halaman pengaturan dari menu utama atau dengan mengklik ikon pengaturan di pojok kanan atas.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Pengguna dapat mengubah nama, email, dan password mereka, dan menekan tombol "Save Changes" untuk menyimpan perubahan tersebut (meskipun saat ini tidak terhubung ke backend).
 
+📍 Lokasi: src/pages/Settings.tsx
 
-# Test Instruction
+## 3. 📊 Halaman Insight Pengguna (User Insights)
+Deskripsi: Halaman ini menampilkan statistik terkait aktivitas membaca pengguna, termasuk total buku yang telah dibaca, buku yang sedang dibaca, dan rata-rata bacaan per bulan.
 
-Hi there! 👋  
-Thanks for applying to our internship program.
+Fitur:
 
-This is a small take-home assignment where you'll contribute to a simple **Book Tracker App**.  
-You can choose how to contribute based on your strongest area: **Frontend, Backend, DevOps, QA, or Data**.
+Statistik yang ditampilkan berupa data dummy untuk saat ini, dengan layout yang bersih dan mobile-friendly.
 
----
+Tampilan yang terstruktur untuk memudahkan pengguna dalam melihat progress mereka.
 
-## 🧭 Goal
+Langkah Akses:
 
-We want to see how you solve problems, write code, and structure your work — all in about **2–4 hours**.
+Setelah login, pengguna dapat mengakses halaman Insight langsung dari dashboard atau menu.
 
----
+Statistik akan ditampilkan secara otomatis dan akan mencakup metrik seperti total buku yang telah dibaca dan rata-rata buku yang dibaca per bulan.
 
-If you're applying for **DevOps**, **QA**, or **Data**, you can use the provided base code in the `backend/` or `frontend/` folders.
+📍 Lokasi: src/pages/Insight.tsx
 
----
-
-## ✅ What to Do
-
-1. **Fork this repo** into your own GitHub account.
-2. **Pick ONE area** you're confident in:
-   - Frontend
-   - Backend
-   - DevOps
-   - QA
-   - Data
-   - Project/Product Manager
-   - UI/UX
-3. **Work only in the part that fits your chosen role.**
-4. Push your code and include in your `README.md`:
-   - Your chosen role
-   - How to run/test your part
-   - Any notes or decisions you made
-   - Create Merge Request to the main branch
-
----
-
-## 🔧 Tasks by Role
-
-### 🔹 Fullstack
-- Complete feature for Library > Browse page
-    - implement search by name and category
-    - add detail page
-- Bonus: Add more Essential feature
-
-### 🔹 Frontend
-- Build a UI to:
-  - User Authentication
-  - User Settings
-  - User Insight
-- No need to connect to BE if API was not available. just create dummy page on FE
-- Bonus: Add more Essential feature
-
-### 🔹 Backend
-- Build a REST API that supports:
-  - Search and filtering
-  - Books added to user library
-- Use in-memory storage or simple JSON file
-- Bonus: Add input validation or simple auth
-
-### 🔹 DevOps
-- Use `backend/` or `frontend/` as the app to work on
-- Create:
-  - `Dockerfile`
-  - (Optional) `docker-compose.yml`
-  - (Optional) GitHub Actions CI (e.g., lint, test)
-- Bonus: Add environment config or deployment steps
-
-### 🔹 QA
-- Write test cases (unit/integration) for:
-  - API in `backend/`, or
-  - UI in `frontend/`
-- Tools you can use:
-  - Postman, Jest, Supertest, Cypress, Playwright, etc.
-- Bonus: Add a test report or coverage info
-
-### 🔹 UI/UX
-- Use Figma for Create new design for usecase User Authentication and User Settings/Profile
-- Bonus: Add more essential feature page
-
-### 🔹 Project/Product Manager
-- Create timeline if i need to add new checkout or payment feature
-    - task breakdown
-    - imagine you resource of 1 person for each role
-    - estimated time
-- Tools you can use:
-    - Notion, Any Project Management Tools
-- Delivery send document link to recruiter emails
-- Bonus: Add more timeline for other essential feature
-
-
-### 🔹 Data
-- Give me example dashboard using context or data related to book tracker apps that had feature
-    - Books library
-    - User Books Library
-    - Rent or Buy Books
-- Bonus: Output result as Graphic or add business related insight
-
----
-
-## 🌟 Bonus Points (Optional)
-
-We appreciate extra touches like:
-
-- ✅ Clean code structure / design pattern
-- ✅ Branching with meaningful commit history
-- ✅ README with clear instructions
-- ✅ Use of linters, formatters, or type checkers
-- ✅ Tests even if you're not applying for QA
-- ✅ CI workflow using GitHub Actions
-- ✅ UI polish, error handling, logging, etc.
-
----
-
-## 🕐 Timebox
-
-This should take around **2–4 hours**.  
-No need to overengineer — focus on clarity and your best work in a short time.
-
----
-
-## 📩 Submission
-
-Once you're done, share your GitHub repo link with us.
-
-Good luck, and have fun! 🚀
-
-
-
+## 📝 Notes
+* Halaman UI yang dibuat ini bertujuan untuk memberikan gambaran visual awal bagi aplikasi, namun belum terhubung ke backend. Semua data yang ditampilkan, seperti statistik buku atau informasi pengguna, masih berupa data palsu (dummy).
+* Struktur komponen dan file diatur sedemikian rupa agar aplikasi dapat dengan mudah berkembang dan diperluas dengan penambahan fitur atau integrasi backend nanti nya.
+* Penggunaan Tailwind CSS memungkinkan pengembangan antarmuka yang fleksibel, dengan desain yang konsisten dan cepat dalam penerapan perubahan
+* Semua komponen UI yang telah dibuat dirancang untuk dapat diimprovisasi lebih lanjut agar sesuai dengan kebutuhan aplikasi seiring berjalannya waktu, menjadikan proyek ini siap untuk penerapan lebih lanjut dalam pengembangan fitur-fitur backend.
