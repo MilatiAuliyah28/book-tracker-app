@@ -13,16 +13,22 @@ Sebelum memulai, pastikan Anda memiliki perangkat lunak berikut yang terinstal p
 - Git x64
 
 ## 🚀 Steps to Run a Project 
-# Clone repository (jika belum melakukannya):
+
+### - Clone repository (jika belum melakukannya):
+```bash
 git clone 
 cd Book-app-/frontend
+````
 
-# Install semua dependensi yang dibutuhkan oleh proyek:
+### - Install semua dependensi yang dibutuhkan oleh proyek:
+```bash
 npm install
+````
 
-# Jalankan aplikasi secara lokal:
+### - Jalankan aplikasi secara lokal:
+```bash
 npm run dev 
-
+````
 Aplikasi kini dapat diakses di browser melalui http://localhost:8080/ untuk melihat dan menguji User Interface.
 
 ## ✨ Fitur
